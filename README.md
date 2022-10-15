@@ -1,5 +1,5 @@
 # potplayer-lingva
-PotPlayer Extension for subtitle auto-translation with Lingva Translate
+Lingva Translate integration for PotPlayer subtitles realtime translation
 
 [English](README.md) | [한국어](README_KO.md)
 
