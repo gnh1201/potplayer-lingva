@@ -185,6 +185,7 @@ string server_url;
 string ServerLogin(string User, string Pass)
 {
 	server_url = User;
+	if (server_url.empty()) server_url = "https://lingva.ml";
 	return "200 ok";
 }
 
