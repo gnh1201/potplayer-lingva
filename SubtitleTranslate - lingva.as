@@ -222,6 +222,7 @@ string Translate(string Text, string &in SrcLang, string &in DstLang)
 	string ret = JsonParseV1(text);
 	if (ret.length() > 0)
 	{
+		//ret += "\n" + Text;   // for foreign language learner :)
 		SrcLang = "UTF8";
 		DstLang = "UTF8";
 		return ret;
