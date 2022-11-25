@@ -13,4 +13,4 @@ Lingva Translate integration for PotPlayer subtitles realtime translation
 * Lingva Translate - https://github.com/thedaviddelta/lingva-translate
 
 ## Contact me
-* gnh1201@gmail.com
+* abuse@catswords.net
