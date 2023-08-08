@@ -13,4 +13,5 @@
 * Lingva Translate - https://github.com/thedaviddelta/lingva-translate
 
 ## 문의사항
-* gnh1201@gmail.com
+* abuse@catswords.net
+* ActivityPub [@catswords_oss@catswords.social](https://catswords.social/@catswords_oss)
