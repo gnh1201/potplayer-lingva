@@ -14,3 +14,4 @@ Lingva Translate integration for PotPlayer subtitles realtime translation
 
 ## Contact me
 * abuse@catswords.net
+* ActivityPub [@catswords_oss@catswords.social](https://catswords.social/@catswords_oss)
