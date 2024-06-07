@@ -8,6 +8,9 @@ Lingva Translate integration for PotPlayer subtitles realtime translation
 2. Set the server URL(e.g. `https://lingva.ml` or your server URL) in the subtitles realtime translation configuration on PotPlayer
 3. Enjoy it.
 
+## Recommended servers
+* https://translate.catswords.net - Asia (South Korea), Last checked on June 07, 2024
+
 ## Requirements
 * PotPlayer - https://potplayer.daum.net/
 * Lingva Translate - https://github.com/thedaviddelta/lingva-translate
