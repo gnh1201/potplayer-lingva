@@ -21,4 +21,5 @@ The alternative server is funded personally by the author of potplayer-lingva, s
 ## Report abuse
 - abuse@catswords.net
 - ActivityPub [@catswords_oss@catswords.social](https://catswords.social/@catswords_oss)
-- [Join Catswords on Microsoft Teams](https://teams.live.com/l/community/FEACHncAhq8ldnojAI)
+- [Join Catswords OSS on Microsoft Teams](https://teams.live.com/l/community/FEACHncAhq8ldnojAI)
+- [Join Catswords OSS #potplayer-lingva on Discord](https://discord.gg/zmQW5MtjcC)
