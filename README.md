@@ -12,6 +12,8 @@ Lingva Translate integration for PotPlayer subtitles realtime translation
 - https://lingva.ml - Default
 - https://translate.catswords.net - Asia (South Korea), Last checked on November 11, 2024
 
+**Note**: The "translate.catswords.net" server is subject to the laws of South Korea. For more details, please refer to the [Terms of Service](https://policy.catswords.social/site_extended_description_EN.html) and [Privacy Policy](https://policy.catswords.social/site_terms_EN.html).
+
 ## Requirements
 - PotPlayer - https://potplayer.daum.net/
 - Lingva Translate - https://github.com/thedaviddelta/lingva-translate
