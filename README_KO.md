@@ -10,9 +10,7 @@
 
 ## 사용 가능한 서버
 - https://lingva.ml - 기본
-- https://translate.catswords.net - 대한민국, 2024년 11월 10일 기준 운영중
-
-***참고***: "translate.catswords.net" 서버는 대한민국 법의 적용을 받습니다. 자세한 내용은 [이용 규칙](https://policy.catswords.social/site_extended_description.html) 및 [개인정보보호정책](https://policy.catswords.social/site_terms.html)을 참고하세요.
+- https://translate.catswords.net - 대한민국, 2024년 11월 10일 기준 운영중 (***확인 필수***: [이용 규칙](https://policy.catswords.social/site_extended_description.html) 및 [개인정보보호정책](https://policy.catswords.social/site_terms.html))
 
 ## 필요한 구성요소
 - PotPlayer - https://potplayer.daum.net/
