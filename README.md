@@ -19,5 +19,5 @@ Lingva Translate integration for PotPlayer subtitles realtime translation
 ## Report abuse
 - abuse@catswords.net
 - ActivityPub [@catswords_oss@catswords.social](https://catswords.social/@catswords_oss)
-- [Join Catswords OSS on Microsoft Teams](https://teams.live.com/l/community/FEACHncAhq8ldnojAI)
-- [Join Catswords OSS #potplayer-lingva on Discord](https://discord.gg/zmQW5MtjcC)
+- [Join Catswords OSS on Microsoft Teams (teams.live.com)](https://teams.live.com/l/community/FEACHncAhq8ldnojAI)
+- [Join Catswords OSS #potplayer-lingva on Discord (discord.gg)](https://discord.gg/zmQW5MtjcC)
