@@ -22,4 +22,4 @@
 - abuse@catswords.net
 - ActivityPub [@catswords_oss@catswords.social](https://catswords.social/@catswords_oss)
 - [Microsoft Teams에서 Catswords OSS 참여 (teams.live.com)](https://teams.live.com/l/community/FEACHncAhq8ldnojAI)
-- [Discord에서 Catswords OSS #potplayer-lingva 참여] (discord.gg)](https://discord.gg/zmQW5MtjcC)
+- [Discord에서 Catswords OSS #potplayer-lingva 참여 (discord.gg)](https://discord.gg/zmQW5MtjcC)
