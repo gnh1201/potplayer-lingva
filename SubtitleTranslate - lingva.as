@@ -1,4 +1,4 @@
-﻿/*
+/*
 	real time subtitle translate for PotPlayer using Lingva (Google alternative front-end) API
 */
 
@@ -27,6 +27,7 @@ string JsonParseV1(string json)
 	if (Reader.parse(json, Root) && Root.isObject()) {
 		JsonValue translation = Root["translation"];
 		if (translation.isString()) ret = translation.asString();
+		HostPrintUTF8("33333======================ret:"+ret);// for debug print
 	}
 
 	return ret;
@@ -145,6 +146,7 @@ array<string> LangTable =
 
 string UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36";
 
+
 string GetTitle()
 {
 	return "{$CP949=링바(구글) 번역$}{$CP950=Lingva(Google) 翻譯$}{$CP0=Lingva(Google) translate$}";
@@ -184,8 +186,160 @@ string server_url;
 
 string ServerLogin(string User, string Pass)
 {
+	//HostOpenConsole();	// for debug
+	string text;
+	int start_pos;
 	server_url = User;
-	if (server_url.empty()) server_url = "https://lingva.ml";
+	if (server_url.empty())
+	{
+		server_url = "https://lingva.ml";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://translate.plausibility.cloud";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://translate.alxserver.de";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://translate.abrendan.dev";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://lingva.dialectapp.org";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://translate.sphererapids.com";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://salucyr69.synology.me:6455";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://translater.perfectpurple.top";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://translate.palmasolutions.net";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://nyc1.lv.ggtyler.dev";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://lingva.sharktale.xyz";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://translate.gururaja.in";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://lingva.steel77.ddnss.de";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://translate.mnsr.net";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://lingva.privacytools.click";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://lingva.adminforge.de";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://fanyi.qz.ci";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://lingva.seasi.dev";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://lingva.lunar.icu";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://translate.nexo.moe";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+		server_url = "https://translate.ssnc.uk";
+		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
+		HostPrintUTF8("4444======================url:"+server_url+"text:"+text);// for debug print
+		start_pos = text.findFirst("translation", 0);
+		if (start_pos > 0){
+			return "200 ok";
+		}
+	}
 	return "200 ok";
 }
 
@@ -226,8 +380,13 @@ string Translate(string Text, string &in SrcLang, string &in DstLang)
 
 	string enc = HostUrlEncode(Text);
 
+	string url = server_url + "/api/v1/" + SrcLang + "/" + DstLang + "/" + enc;
+	HostPrintUTF8("[*] url (f: Translate):" + url); // for debug print
+
 	string url = server_url + "/api/v1/" + _SrcLang + "/" + _DstLang + "/" + enc;
 	string text = HostUrlGetString(url, UserAgent);
+	HostPrintUTF8("[*] text (f: Translate):" + text); // for debug print
+
 	string ret = JsonParseV1(text);
 	if (ret.length() > 0)
 	{
