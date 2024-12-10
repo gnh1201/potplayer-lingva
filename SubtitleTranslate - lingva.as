@@ -212,16 +212,21 @@ array<string> GetDstLangs()
 string Translate(string Text, string &in SrcLang, string &in DstLang)
 {
 	//HostOpenConsole();	// for debug
-	string DstLang_lan =DstLang
-	DstLang_lan.replace("zh-CN","zh");
-	DstLang_lan.replace("zh-TW","zh");
+
+	string _SrcLang = SrcLang;
+	_SrcLang.replace("zh-CN","zh");
+	_SrcLang.replace("zh-TW","zh");
+
+	string _DstLang = DstLang;
+	_DstLang.replace("zh-CN","zh");
+	_DstLang.replace("zh-TW","zh");
 
 	if (SrcLang.length() <= 0) SrcLang = "auto";
 	SrcLang.MakeLower();
 
 	string enc = HostUrlEncode(Text);
 
-	string url = server_url + "/api/v1/" + SrcLang + "/" + DstLang + "/" + enc;
+	string url = server_url + "/api/v1/" + _SrcLang + "/" + _DstLang + "/" + enc;
 	string text = HostUrlGetString(url, UserAgent);
 	string ret = JsonParseV1(text);
 	if (ret.length() > 0)
