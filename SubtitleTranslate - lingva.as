@@ -159,7 +159,7 @@ string GetVersion()
 
 string GetDesc()
 {
-	return "https://github.com/thedaviddelta/lingva-translate";
+	return "https://github.com/gnh1201/potplayer-lingva";
 }
 
 string GetLoginTitle()
@@ -186,188 +186,51 @@ string server_url;
 
 string ServerLogin(string User, string Pass)
 {
-	//HostOpenConsole();	// for debug
+	HostOpenConsole();	// for debug
+	
 	string text;
 	int start_pos;
 	server_url = User;
 	if (server_url.empty())
 	{
-		server_url = "https://lingva.ml";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
+		string[] server_urls = {
+			"https://translate.catswords.net",
+			"https://translate.plausibility.cloud",
+			"https://translate.alxserver.de",
+			"https://translate.abrendan.dev",
+			"https://lingva.dialectapp.org",
+			"https://translate.sphererapids.com",
+			"https://salucyr69.synology.me:6455",
+			"https://translater.perfectpurple.top",
+			"https://translate.palmasolutions.net",
+			"https://nyc1.lv.ggtyler.dev",
+			"https://lingva.sharktale.xyz",
+			"https://translate.gururaja.in",
+			"https://lingva.steel77.ddnss.de",
+			"https://translate.mnsr.net",
+			"https://lingva.privacytools.click",
+			"https://lingva.adminforge.de",
+			"https://fanyi.qz.ci",
+			"https://lingva.seasi.dev",
+			"https://lingva.lunar.icu",
+			"https://translate.nexo.moe",
+			"https://translate.ssnc.uk",
+			"https://lingva.ml"
+		};
 
-		server_url = "https://translate.catswords.net";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
+		for (uint i = 0; i < server_urls.length(); i++) {
+			server_url = server_urls[i];
+			
+			string text = HostUrlGetString(server_url + "/api/v1/en/ko/hello", UserAgent);
+			HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 
-		server_url = "https://translate.plausibility.cloud";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://translate.alxserver.de";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://translate.abrendan.dev";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://lingva.dialectapp.org";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://translate.sphererapids.com";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://salucyr69.synology.me:6455";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://translater.perfectpurple.top";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://translate.palmasolutions.net";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://nyc1.lv.ggtyler.dev";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://lingva.sharktale.xyz";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://translate.gururaja.in";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://lingva.steel77.ddnss.de";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://translate.mnsr.net";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://lingva.privacytools.click";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://lingva.adminforge.de";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://fanyi.qz.ci";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://lingva.seasi.dev";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://lingva.lunar.icu";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://translate.nexo.moe";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
-		}
-
-		server_url = "https://translate.ssnc.uk";
-		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("(f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
-		start_pos = text.findFirst("translation", 0);
-		if (start_pos > 0){
-			return "200 ok";
+			int start_pos = text.findFirst("translation", 0);
+			if (start_pos > 0) {
+				return "200 ok";
+			}
 		}
 	}
+	
 	return "200 ok";
 }
 
@@ -395,21 +258,18 @@ string Translate(string Text, string &in SrcLang, string &in DstLang)
 {
 	//HostOpenConsole();	// for debug
 
-	string _SrcLang = SrcLang;
-	_SrcLang.replace("zh-CN","zh");
-	_SrcLang.replace("zh-TW","zh");
-
-	string _DstLang = DstLang;
-	_DstLang.replace("zh-CN","zh");
-	_DstLang.replace("zh-TW","zh");
+	SrcLang.replace("zh-CN", "zh");
+	SrcLang.replace("zh-TW", "zh");
+	DstLang.replace("zh-CN", "zh");
+	DstLang.replace("zh-TW", "zh");
 
 	if (SrcLang.length() <= 0) SrcLang = "auto";
 	SrcLang.MakeLower();
 
 	string enc = HostUrlEncode(Text);
-	string url = server_url + "/api/v1/" + _SrcLang + "/" + _DstLang + "/" + enc;
+	string url = server_url + "/api/v1/" + SrcLang + "/" + DstLang + "/" + enc;
 	string text = HostUrlGetString(url, UserAgent);
-	HostPrintUTF8("(f: Translate) text:" + text); // for debug print
+	HostPrintUTF8("(f: Translate) url: " + url + ", text:" + text); // for debug print
 
 	string ret = JsonParseV1(text);
 	if (ret.length() > 0)
