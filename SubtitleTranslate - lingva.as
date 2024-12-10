@@ -407,10 +407,6 @@ string Translate(string Text, string &in SrcLang, string &in DstLang)
 	SrcLang.MakeLower();
 
 	string enc = HostUrlEncode(Text);
-
-	string url = server_url + "/api/v1/" + SrcLang + "/" + DstLang + "/" + enc;
-	HostPrintUTF8("[*] url (f: Translate):" + url); // for debug print
-
 	string url = server_url + "/api/v1/" + _SrcLang + "/" + _DstLang + "/" + enc;
 	string text = HostUrlGetString(url, UserAgent);
 	HostPrintUTF8("[*] text (f: Translate):" + text); // for debug print
