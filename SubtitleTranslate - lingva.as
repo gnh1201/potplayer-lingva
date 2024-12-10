@@ -212,6 +212,9 @@ array<string> GetDstLangs()
 string Translate(string Text, string &in SrcLang, string &in DstLang)
 {
 	//HostOpenConsole();	// for debug
+	string DstLang_lan =DstLang
+	DstLang_lan.replace("zh-CN","zh");
+	DstLang_lan.replace("zh-TW","zh");
 
 	if (SrcLang.length() <= 0) SrcLang = "auto";
 	SrcLang.MakeLower();
