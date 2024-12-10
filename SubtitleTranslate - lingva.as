@@ -367,16 +367,25 @@ string Translate(string Text, string &in SrcLang, string &in DstLang)
 {
 	//HostOpenConsole();	// for debug
 
+	string _SrcLang = SrcLang;
+	_SrcLang.replace("zh-CN","zh");
+	_SrcLang.replace("zh-TW","zh");
+
+	string _DstLang = DstLang;
+	_DstLang.replace("zh-CN","zh");
+	_DstLang.replace("zh-TW","zh");
+
 	if (SrcLang.length() <= 0) SrcLang = "auto";
 	SrcLang.MakeLower();
 
 	string enc = HostUrlEncode(Text);
 
 	string url = server_url + "/api/v1/" + SrcLang + "/" + DstLang + "/" + enc;
-	HostPrintUTF8("11111======================url:"+url);// for debug print
-	
+	HostPrintUTF8("[*] url (f: Translate):" + url); // for debug print
+
+	string url = server_url + "/api/v1/" + _SrcLang + "/" + _DstLang + "/" + enc;
 	string text = HostUrlGetString(url, UserAgent);
-	HostPrintUTF8("22222======================text:"+text);// for debug print
+	HostPrintUTF8("[*] text (f: Translate):" + text); // for debug print
 
 	string ret = JsonParseV1(text);
 	if (ret.length() > 0)
