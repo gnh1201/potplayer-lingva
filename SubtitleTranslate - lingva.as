@@ -27,7 +27,7 @@ string JsonParseV1(string json)
 	if (Reader.parse(json, Root) && Root.isObject()) {
 		JsonValue translation = Root["translation"];
 		if (translation.isString()) ret = translation.asString();
-		HostPrintUTF8("33333======================ret:"+ret);// for debug print
+		HostPrintUTF8("[*] (f: JsonParseV1) ret: " + ret);// for debug print
 	}
 
 	return ret;
@@ -194,7 +194,7 @@ string ServerLogin(string User, string Pass)
 	{
 		server_url = "https://lingva.ml";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -202,7 +202,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://translate.catswords.net";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -210,7 +210,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://translate.plausibility.cloud";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -218,7 +218,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://translate.alxserver.de";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -226,7 +226,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://translate.abrendan.dev";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -234,7 +234,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://lingva.dialectapp.org";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -242,7 +242,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://translate.sphererapids.com";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text; // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -250,7 +250,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://salucyr69.synology.me:6455";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -258,7 +258,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://translater.perfectpurple.top";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -266,7 +266,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://translate.palmasolutions.net";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -274,7 +274,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://nyc1.lv.ggtyler.dev";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -282,7 +282,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://lingva.sharktale.xyz";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -290,7 +290,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://translate.gururaja.in";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -298,7 +298,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://lingva.steel77.ddnss.de";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -306,7 +306,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://translate.mnsr.net";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -314,7 +314,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://lingva.privacytools.click";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -322,7 +322,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://lingva.adminforge.de";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -330,7 +330,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://fanyi.qz.ci";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -338,7 +338,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://lingva.seasi.dev";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -346,7 +346,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://lingva.lunar.icu";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -354,7 +354,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://translate.nexo.moe";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
@@ -362,7 +362,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://translate.ssnc.uk";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] url: " + server_url + ", text: " + text + " (f: ServerLogin)"); // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
