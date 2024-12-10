@@ -242,7 +242,7 @@ string ServerLogin(string User, string Pass)
 
 		server_url = "https://translate.sphererapids.com";
 		text = HostUrlGetString(server_url+"/api/v1/en/zh/hello",  UserAgent);
-		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text; // for debug print
+		HostPrintUTF8("[*] (f: ServerLogin) url: " + server_url + ", text: " + text); // for debug print
 		start_pos = text.findFirst("translation", 0);
 		if (start_pos > 0){
 			return "200 ok";
