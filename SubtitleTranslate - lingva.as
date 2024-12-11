@@ -186,7 +186,7 @@ string server_url;
 
 string ServerLogin(string User, string Pass)
 {
-	HostOpenConsole();	// for debug
+	//HostOpenConsole();	// for debug
 	
 	string text;
 	int start_pos;
