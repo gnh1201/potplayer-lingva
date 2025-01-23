@@ -182,6 +182,18 @@ string GetPasswordText()
 	return "";
 }
 
+string[] GetServerUrls()
+{
+	string text = HostUrlGetString("https://scriptas.catswords.net/lingva.txt", UserAgent);
+	text.replace("\r\n", "\n");
+
+	string[] urls = text.split("\n");
+	int len = url.length();
+	HostPrintUTF8("(f: GetServerUrls) len: " + len); // for debug print
+
+	return urls;
+}
+
 string server_url;
 
 string ServerLogin(string User, string Pass)
@@ -193,30 +205,7 @@ string ServerLogin(string User, string Pass)
 	server_url = User;
 	if (server_url.empty())
 	{
-		string[] server_urls = {
-			"https://translate.catswords.net",
-			"https://translate.plausibility.cloud",
-			"https://translate.alxserver.de",
-			"https://translate.abrendan.dev",
-			"https://lingva.dialectapp.org",
-			"https://translate.sphererapids.com",
-			"https://salucyr69.synology.me:6455",
-			"https://translater.perfectpurple.top",
-			"https://translate.palmasolutions.net",
-			"https://nyc1.lv.ggtyler.dev",
-			"https://lingva.sharktale.xyz",
-			"https://translate.gururaja.in",
-			"https://lingva.steel77.ddnss.de",
-			"https://translate.mnsr.net",
-			"https://lingva.privacytools.click",
-			"https://lingva.adminforge.de",
-			"https://fanyi.qz.ci",
-			"https://lingva.seasi.dev",
-			"https://lingva.lunar.icu",
-			"https://translate.nexo.moe",
-			"https://translate.ssnc.uk",
-			"https://lingva.ml"
-		};
+		string[] server_urls = GetServerUrls();
 
 		for (uint i = 0; i < server_urls.length(); i++) {
 			server_url = server_urls[i];
