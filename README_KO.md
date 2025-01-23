@@ -16,8 +16,11 @@
 - PotPlayer - https://potplayer.daum.net/
 - Lingva Translate - https://github.com/thedaviddelta/lingva-translate
 
-## 문의사항
+## 보안 문제 보고
 - abuse@catswords.net
+- [GitHub 보안 권고 (gnh1201/potplayer-lingva)](https://github.com/gnh1201/potplayer-lingva/security)
+
+## 커뮤니티 참여
 - ActivityPub [@catswords_oss@catswords.social](https://catswords.social/@catswords_oss)
 - [Microsoft Teams에서 Catswords OSS 참여 (teams.live.com)](https://teams.live.com/l/community/FEACHncAhq8ldnojAI)
 - [Discord에서 Catswords OSS #potplayer-lingva 참여 (discord.gg)](https://discord.gg/zmQW5MtjcC)
