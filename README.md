@@ -1,4 +1,6 @@
 # potplayer-lingva
+[![Discord chat](https://img.shields.io/discord/359930650330923008?logo=discord)](https://discord.gg/zmQW5MtjcC)
+
 Lingva Translate integration for PotPlayer subtitles realtime translation
 
 [English](README.md) | [한국어](README_KO.md)
