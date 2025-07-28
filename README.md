@@ -19,7 +19,7 @@ Lingva Translate integration for PotPlayer subtitles realtime translation
 - Lingva Translate - https://github.com/thedaviddelta/lingva-translate
 
 ## Report abuse
-- abuse@catswords.net
+- abuse@catswords.re.kr
 - [GitHub Security Advisories (gnh1201/potplayer-lingva)](https://github.com/gnh1201/potplayer-lingva/security)
 
 ## Join the community
